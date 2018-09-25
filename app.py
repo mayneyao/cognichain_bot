@@ -1,6 +1,6 @@
 from flask import Flask, request
 
-from .tower.client import TowerClient
+from tower.client import TowerClient
 
 app = Flask(__name__)
 
