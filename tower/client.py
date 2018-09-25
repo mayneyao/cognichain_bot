@@ -54,5 +54,5 @@ class TowerClient:
         return res
 
     def get_project(self, project_id):
-        url = urljoin(TOWER_BASE_URL, 'projects/{project_id}'.format(project_id))
+        url = urljoin(TOWER_BASE_URL, 'projects/{}'.format(project_id))
         return self.requests.get(url).json()
