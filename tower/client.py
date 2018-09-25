@@ -47,6 +47,10 @@ class TowerClient:
     def refresh_token(self):
         pass
 
+    def get_team_all_projetcts(self):
+        url = 'https://tower.im/teams/560be5e1666649d8958460c37710b703/projects/'
+        res = self.requests.get(url).json()
+        return res
+
     def get_project(self, project_id):
         url = urljoin(TOWER_BASE_URL, 'projects/{project_id}'.format(project_id))
-    
