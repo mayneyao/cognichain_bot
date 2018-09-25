@@ -49,7 +49,7 @@ class TowerClient:
         pass
 
     def get_team_all_projetcts(self):
-        url = 'https://tower.im/teams/560be5e1666649d8958460c37710b703/projects/'
+        url = 'https://tower.im/api/v1/teams/560be5e1666649d8958460c37710b703/projects/'
         res = self.requests.get(url).json()
         return res
 
