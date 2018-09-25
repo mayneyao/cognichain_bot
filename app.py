@@ -10,7 +10,8 @@ def get_auth_code():
     auth_code = request.args.get('code')
 
     client = TowerClient(auth_code)
-    r = client.get_team_all_projetcts()
+    # r = client.get_team_all_4projetcts()
+    r = client.get_project('54962129fb764b5ca4a5ad9cf94de324')
     print(r)
     return jsonify(r)
 
