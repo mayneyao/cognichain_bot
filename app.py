@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 
 from tower.client import TowerClient
 
@@ -12,7 +12,7 @@ def get_auth_code():
     client = TowerClient(auth_code)
     r = client.get_team_all_projetcts()
     print(r)
-    return r
+    return jsonify(r)
 
 
 if __name__ == '__main__':
