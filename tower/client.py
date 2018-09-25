@@ -33,6 +33,7 @@ class TowerClient:
             'redirect_uri': REDIRECT_URL,
         }).json()
 
+        print(res)
         self.access_token = res['access_token']
         self.token_type = res['token_type']
         self.expires_in = res['expires_in']
